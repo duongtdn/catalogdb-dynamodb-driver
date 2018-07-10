@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/duongtdn/coursedb-dynamodb-driver.git"
+    "url": "git+https://github.com/duongtdn/catalogdb-dynamodb-driver.git"
   },
   "author": "duongtdn",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/duongtdn/coursedb-dynamodb-driver/issues"
+    "url": "https://github.com/duongtdn/catalogdb-dynamodb-driver/issues"
   },
-  "homepage": "https://github.com/duongtdn/coursedb-dynamodb-driver#readme",
+  "homepage": "https://github.com/duongtdn/catalogdb-dynamodb-driver#readme",
   "dependencies": {
     "aws-sdk": "^2.247.1"
   }
