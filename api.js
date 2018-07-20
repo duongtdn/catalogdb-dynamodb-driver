@@ -76,6 +76,28 @@ const db = {
 
   },
 
+  list(done) {
+
+    const params = { 
+      TableName: table, 
+      ProjectionExpression: "catalogId, title"
+    }
+
+    const docClient = new AWS.DynamoDB.DocumentClient();
+    docClient.scan(params, function(err, data) {
+      if (err) {
+        done && done({ error:`Unable to scan table: ${JSON.stringify(err, null, 2)}`}, null);
+      } else {
+        if (data && data.Items) {
+          done && done(null, data.Items);
+        } else {
+          done && done(null, null);
+        }
+      }
+    });
+
+  },
+
   createCatalog( {uid, catalog}, done) {
 
     if (!uid) {
